@@ -1,21 +1,27 @@
-import {Meals} from '../data/dummyData';
-import {View, Text, StyleSheet} from 'react-native';
+import { Meals } from "../data/dummyData";
+import { View, Text, StyleSheet } from "react-native";
 
-function MealsOverviewScreen(){
-    return(
-        <View style={styles.screen}>
-            <Text>The Meals Overview Screen!</Text>
-        </View>
-    );
+function MealsOverviewScreen({route}) {
+
+    const catID = route.params.categoryId;
+
+  return (
+    <View style={styles.screen}>
+      <Text>
+        {catID}
+      </Text>
+    </View>
+  );
 }
 
 export default MealsOverviewScreen;
 
 const styles = StyleSheet.create({
-    screen: {
-        flex: 1,
-        padding:16,
-        justifyContent: 'center',
-        alignItems: 'center'
-    }
+  screen: {
+    flex: 1,
+    fontSize: 28,
+    padding: 16,
+    justifyContent: "center",
+    alignItems: "center",
+  },
 });
